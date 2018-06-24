@@ -19,11 +19,15 @@ forward Action TF2_OnCalculateMaxSpeed(int client, float &flMaxSpeed);
 /**
  * Do not edit below this line!
  */
-public Extension __ext_tf2 = 
+public Extension __ext_tf_calcmaxspeed = 
 {
 	name = "TF2 Calculate Max Speed Detour",
 	file = "tf_calcmaxspeed.ext",
+#if defined AUTOLOAD_EXTENSIONS
+	autoload = 1,
+#else
 	autoload = 0,
+#endif
 #if defined REQUIRE_EXTENSIONS
 	required = 1,
 #else
