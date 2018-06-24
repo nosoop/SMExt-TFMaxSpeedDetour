@@ -42,7 +42,7 @@
 #define SMEXT_CONF_DESCRIPTION	"Allows overriding max speed results"
 #define SMEXT_CONF_VERSION		"1.0.0.0"
 #define SMEXT_CONF_AUTHOR		"nosoop"
-#define SMEXT_CONF_URL			"https://github.com/nosoop/SMExt-TFCalcMaxSpeedDetour"
+#define SMEXT_CONF_URL			"https://github.com/nosoop/SMExt-TFMaxSpeedDetour"
 #define SMEXT_CONF_LOGTAG		"TFMAXSPEED"
 #define SMEXT_CONF_LICENSE		"GPL"
 #define SMEXT_CONF_DATESTRING	__DATE__
