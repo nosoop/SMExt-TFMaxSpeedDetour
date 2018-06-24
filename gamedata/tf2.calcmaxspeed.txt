@@ -1,0 +1,15 @@
+"Games"
+{
+	"tf"
+	{
+		"Signatures"
+		{
+			"CTFPlayer::TeamFortress_CalculateMaxSpeed()"
+			{
+				// contains unique string "mult_player_aiming_movespeed"
+				"library"	"server"
+				"linux"		"@_ZNK9CTFPlayer30TeamFortress_CalculateMaxSpeedEb"
+			}
+		}
+	}
+}
