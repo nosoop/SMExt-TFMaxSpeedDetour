@@ -84,17 +84,18 @@ bool TF2MaxSpeedDetour::SDK_OnLoad(char *error, size_t maxlength, bool late) {
 			DETOUR_CREATE_MEMBER(CTFPlayer_CalculateMaxSpeed,
 			"CTFPlayer::TeamFortress_CalculateMaxSpeed()");
 	
-	detour_CTFPlayer_CalculateMaxSpeed->EnableDetour();
-	
 	gameconfs->CloseGameConfigFile(pGameConf);
 	
 	// Action TF2_OnCalculateMaxSpeed(int client, float &flMaxSpeed);
 	g_calculateMaxSpeedForward = forwards->CreateForward("TF2_OnCalculateMaxSpeed",
 			ET_Hook, 2, NULL, Param_Cell, Param_FloatByRef);
 	
+	detour_CTFPlayer_CalculateMaxSpeed->EnableDetour();
+	
 	return true;
 }
 
 void TF2MaxSpeedDetour::SDK_OnUnload() {
 	detour_CTFPlayer_CalculateMaxSpeed->DisableDetour();
+	forwards->ReleaseForward(g_calculateMaxSpeedForward);
 }
