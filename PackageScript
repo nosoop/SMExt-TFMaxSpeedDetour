@@ -37,6 +37,11 @@ CopyFiles('gamedata', 'addons/sourcemod/gamedata',
   [ 'tf2.calcmaxspeed.txt' ]
 )
 
+# Autoload extension file
+CopyFiles('extensions', 'addons/sourcemod/extensions',
+  [ 'tf_calcmaxspeed.autoload' ]
+)
+
 # Copy binaries.
 for cxx_task in Extension.extensions:
   builder.AddCopy(cxx_task.binary, folder_map['addons/sourcemod/extensions'])

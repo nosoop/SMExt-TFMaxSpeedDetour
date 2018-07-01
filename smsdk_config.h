@@ -40,7 +40,7 @@
 /* Basic information exposed publicly */
 #define SMEXT_CONF_NAME			"TF2 CalculateMaxSpeed Detour"
 #define SMEXT_CONF_DESCRIPTION	"Allows overriding max speed results"
-#define SMEXT_CONF_VERSION		"1.0.1"
+#define SMEXT_CONF_VERSION		"1.0.2"
 #define SMEXT_CONF_AUTHOR		"nosoop"
 #define SMEXT_CONF_URL			"https://github.com/nosoop/SMExt-TFMaxSpeedDetour"
 #define SMEXT_CONF_LOGTAG		"TFMAXSPEED"
