@@ -52,6 +52,11 @@ DETOUR_DECL_MEMBER1(CTFPlayer_CalculateMaxSpeed, float, bool, reentrant) {
 		return flOrigResult;
 	}
 	
+	// prevent calling forward when the server is shutting down
+	if (!g_pSM->IsMapRunning()) {
+		return flOrigResult;
+	}
+	
 	float flResult = flOrigResult;
 	
 	cell_t playerCell = gamehelpers->EntityToBCompatRef((CBaseEntity *)this);
