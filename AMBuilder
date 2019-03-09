@@ -6,8 +6,9 @@ projectName = 'tf_calcmaxspeed'
 # smsdk_ext.cpp will be automatically added later
 sourceFiles = [
   'extension.cpp',
-  '../../public/CDetour/detours.cpp',
-  '../../public/asm/asm.c',
+  
+  os.path.join(Extension.sm_root, 'public', 'CDetour', 'detours.cpp'),
+  os.path.join(Extension.sm_root, 'public', 'asm', 'asm.c'),
 ]
 
 ###############
