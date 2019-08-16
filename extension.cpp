@@ -61,6 +61,11 @@ DETOUR_DECL_MEMBER1(CTFPlayer_CalculateMaxSpeed, float, bool, reentrant) {
 	
 	cell_t playerCell = gamehelpers->EntityToBCompatRef((CBaseEntity *)this);
 	
+	// prevent calling on invalid player (????)
+	if (!playerhelpers->GetGamePlayer(playerCell)->IsInGame()) {
+		return flOrigResult;
+	}
+	
 	g_calculateMaxSpeedForward->PushCell(playerCell);
 	g_calculateMaxSpeedForward->PushFloatByRef(&flResult);
 	
